@@ -264,16 +264,16 @@
     #logosdiv { display: none; }  /* hide it on small screens */
 
     .wrapper {
-      grid-gap: 2px;      
+      grid-gap: 5px;      
     }
 
     .boxes {
-      grid-gap: 2px;       
+      grid-gap: 5px;       
     }
 
     .info {
-      grid-gap: 2px;
-      padding: 5px;    
+      grid-gap: 5px;
+      padding: 10px;    
     }
 
     body {
