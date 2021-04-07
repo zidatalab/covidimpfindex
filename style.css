@@ -250,6 +250,8 @@
   }
   
   @media (max-width: 500px) {
+    
+
     .top-container {
       grid-template-areas:
         'showcase'
@@ -257,4 +259,28 @@
         'top-box-b';
     }
   }
+
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    #logosdiv { display: none; }  /* hide it on small screens */
+
+    .wrapper {
+      grid-gap: 2px;      
+    }
+
+    .boxes {
+      grid-gap: 2px;       
+    }
+
+    .info {
+      grid-gap: 2px;
+      padding: 5px;    
+    }
+
+    body {
+      margin: 0px 0px;            
+    }
+  }
   
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    #logosdiv { display: block; }   /* show it elsewhere */
+  }
