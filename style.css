@@ -269,11 +269,13 @@
 
     .boxes {
       grid-gap: 5px;       
+      
     }
+
 
     .info {
       grid-gap: 5px;
-      padding: 10px;    
+      
     }
 
     body {
