@@ -5,11 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Impfindex COVID-19 in Deutschland</title>
+  <title>Corona-Impfindex</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/75c95ad019.js"></script>
   <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
   </script>
+ <script>
+ var today = new Date();
+ var dd = String(today.getDate()).padStart(2, '0');
+ var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+ var yyyy = today.getFullYear();
+ today = dd+'.'+mm + '.' + yyyy;
+ var xmlhttp = new XMLHttpRequest();
+ xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("standrki").innerHTML = new Date(myObj[0]['Impfdaschboard']).toLocaleDateString();
+    document.getElementById("standkbv").innerHTML = new Date(myObj[0]['KBV Impfdokumentation']).toLocaleDateString();
+  }
+};
+xmlhttp.open("GET", "https://raw.githubusercontent.com/zidatalab/covid19dashboard/master/data/tabledata/impfdax_stand.json", true);
+xmlhttp.send();
+
+</script>
 </head>
 
 <body>
@@ -27,9 +45,8 @@
       
       <header class="showcase">
         <!-- https://www.pexels.com/de-de/foto/farbe-klinik-gesundheit-krankenhaus-5863367/-->
-        <h1>COVID-19 Impfindex für Deutschland </h1>
-        <p>Überblick über den aktuellen Verlauf der Impfkampagne in Deutschland mit einem Fokus auf Arztpraxen.</p>
-       
+        <h1>Corona-Impfindex</h1>
+        <p>Überblick über den aktuellen Verlauf der Impfkampagne in Deutschland mit einem Fokus auf Arztpraxen.</p>       
       </header>      
     </section>
 
@@ -37,10 +54,12 @@
     <!-- Info Section -->
     <section class="info">
       <div>
-      
         <iframe title="Aktueller Stand" aria-label="Balken" id="datawrapper-chart-tp38e"
         src="https://datawrapper.dwcdn.net/tp38e/1/" scrolling="no" frameborder="0"
         style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>          
+        <div>
+          <p class="caption">Datenstand: BMG/RKI Impfdashboard <span id="standrki"></span>, KBV Impfdokumentation <span id="standkbv"></span></p>
+        </div>
       </div>
       <div style="background-color: rgba(0, 0, 0, 0.057);border-radius: 30px;padding: 2rem;">
         <h2>Meilensteine</h2>

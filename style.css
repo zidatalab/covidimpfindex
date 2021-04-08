@@ -35,6 +35,10 @@
     margin: 0px 50px;
     line-height: 1.4;
   }
+
+  .caption {
+    font-size: .7rem;
+  }
   
   .btn {
     background: var(--dark);
