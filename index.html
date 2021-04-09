@@ -22,6 +22,9 @@
     var myObj = JSON.parse(this.responseText);
     document.getElementById("standrki").innerHTML = new Date(myObj[0]['Impfdaschboard']).toLocaleDateString();
     document.getElementById("standkbv").innerHTML = new Date(myObj[0]['KBV Impfdokumentation']).toLocaleDateString();
+    document.getElementById("aktualisiert").innerHTML = new Date(myObj[0]['Letzte Aktualisierung']).toLocaleDateString();
+    document.getElementById("aktualisiertuhr").innerHTML = new Date(myObj[0]['Letzte Aktualisierung']).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+    console.log(myObj);
   }
 };
 xmlhttp.open("GET", "https://raw.githubusercontent.com/zidatalab/covid19dashboard/master/data/tabledata/impfdax_stand.json", true);
@@ -61,7 +64,8 @@ xmlhttp.send();
         src="https://datawrapper.dwcdn.net/tp38e/1/" scrolling="no" frameborder="0"
         style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>          
         <div>
-          <p class="caption">Datenstand: BMG/RKI Impfdashboard <span id="standrki"></span>, KBV Impfdokumentation <span id="standkbv"></span></p>
+          <p class="caption">Datenstand: BMG/RKI Impfdashboard <span id="standrki"></span>, KBV Impfdokumentation <span id="standkbv"></span><br> 
+            Letzte Datenaktualisierung: <span id="aktualisiert"></span>,<span id="aktualisiertuhr"></span> Uhr</p>
         </div>
       </div>
       <div style="background-color: rgba(0, 0, 0, 0.057);border-radius: 30px;padding: 2rem;">
