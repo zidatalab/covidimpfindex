@@ -283,8 +283,15 @@
     }
 
     body {
-      margin: 0px;            
+      margin: 0px 0px 0px 0px;            
     }
+
+      /* Footer */
+  footer {
+    margin-top: 2rem;
+    width: 80%;
+    padding: 0rem;
+  }
 
     .wrapper {
       margin: 0px;            
