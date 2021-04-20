@@ -10,27 +10,27 @@
   <script src="https://kit.fontawesome.com/75c95ad019.js"></script>
   <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
   </script>
- <script>
- var today = new Date();
- var dd = String(today.getDate()).padStart(2, '0');
- var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
- var yyyy = today.getFullYear();
- today = dd+'.'+mm + '.' + yyyy;
- var xmlhttp = new XMLHttpRequest();
- xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myObj = JSON.parse(this.responseText);
-    document.getElementById("standrki").innerHTML = new Date(myObj[0]['Impfdaschboard']).toLocaleDateString();
-    document.getElementById("standkbv").innerHTML = new Date(myObj[0]['KBV Impfdokumentation']).toLocaleDateString();
-    document.getElementById("aktualisiert").innerHTML = new Date(myObj[0]['Letzte Aktualisierung']).toLocaleDateString();
-    document.getElementById("aktualisiertuhr").innerHTML = new Date(myObj[0]['Letzte Aktualisierung']).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-    console.log(myObj);
-  }
-};
-xmlhttp.open("GET", "https://ziwebstorage.blob.core.windows.net/publicdata/impfdax_stand.json", true);
-xmlhttp.send();
+  <script>
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = dd + '.' + mm + '.' + yyyy;
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("standrki").innerHTML = new Date(myObj[0]['Impfdaschboard']).toLocaleDateString();
+        document.getElementById("standkbv").innerHTML = new Date(myObj[0]['KBV Impfdokumentation']).toLocaleDateString();
+        document.getElementById("aktualisiert").innerHTML = new Date(myObj[0]['Letzte Aktualisierung']).toLocaleDateString();
+        document.getElementById("aktualisiertuhr").innerHTML = new Date(myObj[0]['Letzte Aktualisierung']).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        console.log(myObj);
+      }
+    };
+    xmlhttp.open("GET", "https://ziwebstorage.blob.core.windows.net/publicdata/impfdax_stand.json", true);
+    xmlhttp.send();
 
-</script>
+  </script>
 </head>
 
 <body>
@@ -41,19 +41,18 @@ xmlhttp.send();
     <!-- Top Container -->
     <div id="logosdiv">
       <p style="text-align: right;">
-      <a href="https://www.zi.de"><img _ngcontent-jga-c187="" src="img/zi.png" 
-          style="height: 3rem; margin:5px;"></a>
-      <a href="https://www.kbv.de"><img _ngcontent-jga-c187="" src="img/kbv.jpg" 
-          style="height: 3rem; margin:5px;"></a>
-    </p>
-  </div>
+        <a href="https://www.zi.de"><img _ngcontent-jga-c187="" src="img/zi.png" style="height: 3rem; margin:5px;"></a>
+        <a href="https://www.kbv.de"><img _ngcontent-jga-c187="" src="img/kbv.jpg"
+            style="height: 3rem; margin:5px;"></a>
+      </p>
+    </div>
     <section class="top-container">
-      
+
       <header class="showcase">
         <!-- https://www.pexels.com/de-de/foto/farbe-klinik-gesundheit-krankenhaus-5863367/-->
         <h1>Corona-Impfindex</h1>
-        <p>Überblick über den aktuellen Verlauf der Impfkampagne in Deutschland mit einem Fokus auf Arztpraxen.</p>       
-      </header>      
+        <p>Überblick über den aktuellen Verlauf der Impfkampagne in Deutschland mit einem Fokus auf Arztpraxen.</p>
+      </header>
     </section>
 
 
@@ -61,10 +60,10 @@ xmlhttp.send();
     <section class="info">
       <div>
         <iframe title="Aktueller Stand" aria-label="Balken" id="datawrapper-chart-tp38e"
-        src="https://datawrapper.dwcdn.net/tp38e/1/" scrolling="no" frameborder="0"
-        style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>          
+          src="https://datawrapper.dwcdn.net/tp38e/1/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
         <div>
-         <!--  <p class="caption">Datenstand: BMG/RKI Impfdashboard <span id="standrki"></span>, KBV Impfdokumentation <span id="standkbv"></span><br> 
+          <!--  <p class="caption">Datenstand: BMG/RKI Impfdashboard <span id="standrki"></span>, KBV Impfdokumentation <span id="standkbv"></span><br> 
             Letzte Datenaktualisierung: <span id="aktualisiert"></span>,<span id="aktualisiertuhr"></span> Uhr </p>-->
         </div>
       </div>
@@ -89,31 +88,70 @@ xmlhttp.send();
     <!-- Boxes Section -->
     <section class="boxes">
       <div class="box">
-        <iframe title="Aktuelle Impfungen" aria-label="Balken (gestapelt)" id="datawrapper-chart-Zb8fr" src="https://datawrapper.dwcdn.net/Zb8fr/1/" 
-        scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
-      </div>
-      <div class="box">
-        
-          <iframe title="Stand der Impfkampagne gegen COVID-19" aria-label="Interactive area chart"
-          id="datawrapper-chart-i0p1O" src="https://datawrapper.dwcdn.net/i0p1O/2/" scrolling="no" frameborder="0"
+        <iframe title="Aktuelle Impfungen" aria-label="Balken (gestapelt)" id="datawrapper-chart-Zb8fr"
+          src="https://datawrapper.dwcdn.net/Zb8fr/1/" scrolling="no" frameborder="0"
           style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
-        
+      </div>
+      <div class="box">
+
+        <iframe title="Stand der Impfkampagne gegen COVID-19" aria-label="Interactive area chart"
+          id="datawrapper-chart-i0p1O" src="https://datawrapper.dwcdn.net/i0p1O/2/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
+
 
       </div>
       <div class="box">
-        <div>
-          <iframe title="Entwicklung der Impfkampagne gegen COVID-19" aria-label="Interactive line chart"
-            id="datawrapper-chart-KW0Ku" src="https://datawrapper.dwcdn.net/KW0Ku/1/" scrolling="no" frameborder="0"
-            style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
-        </div>       
+
+        <iframe title="Entwicklung der Impfkampagne gegen COVID-19" aria-label="Interactive line chart"
+          id="datawrapper-chart-KW0Ku" src="https://datawrapper.dwcdn.net/KW0Ku/1/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
+
+
+      </div>
+      <!-- <div class="box" >
+
+        <iframe title="Verimpfung der verfügbaren Dosen" aria-label="Interactive area chart"
+          id="datawrapper-chart-IKoqY" src="https://datawrapper.dwcdn.net/IKoqY/2/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+      </div> -->
+      <div class="box">
+        <iframe title="Verimpften Dosen an wöchentlichen Lieferungen" aria-label="Interactive line chart"
+          id="datawrapper-chart-kshoC" src="https://datawrapper.dwcdn.net/kshoC/1/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
 
       </div>
       <div class="box">
-          
-        <iframe title="Verimpfung der verfügbaren Dosen" aria-label="Interactive area chart" id="datawrapper-chart-IKoqY" 
-        src="https://datawrapper.dwcdn.net/IKoqY/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+        <iframe title="Prognose der Impfquote" aria-label="Interactive area chart" id="datawrapper-chart-29NoU"
+          src="https://datawrapper.dwcdn.net/29NoU/6/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>  
+      </div>
+      <div class="box">
+        <iframe title="Prognose effektiver R-Wert" aria-label="Interactive line chart" id="datawrapper-chart-goYcg"
+          src="https://datawrapper.dwcdn.net/goYcg/2/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
+      </div>
+
+
+    </section>
+    <section class="biggerboxes">
+
+      <div class="box">
+        <iframe title="Stand der Impfkampagne nach Bundesländern" aria-label="chart" id="datawrapper-chart-zA0AE"
+          src="https://datawrapper.dwcdn.net/zA0AE/7/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="950"></iframe>
       </div>
     </section>
+    <section class="biggerboxes">
+      <div class="box">
+        <iframe title="Impfungen in Arztpraxen in der letzten Kalenderwoche" aria-label="chart"
+          id="datawrapper-chart-YT84k" src="https://datawrapper.dwcdn.net/YT84k/2/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="980">
+      </div>
+
+    </section>
+
+
+
 
     <!-- Portfolio -->
     <!-- <section class="portfolio">
@@ -141,12 +179,13 @@ xmlhttp.send();
     </nav>
     <!-- Footer -->
     <footer>
-      <p>&copy; 2021 | <a href="https://www.zidatasciencelab.de">Zi Data Science Lab</a> | Zentralinstitut für die kassenärztliche Versorgung in der Bundesrepublik Deutschland |
+      <p>&copy; 2021 | <a href="https://www.zidatasciencelab.de">Zi Data Science Lab</a> | Zentralinstitut für die
+        kassenärztliche Versorgung in der Bundesrepublik Deutschland |
         <a href="https://www.zi.de/meta/impressum/">Impressum</a>
         | <a href="https://www.zi.de/footer/datenschutzhinweis/">Datenschutzhinweis</a>
       </p>
       <p style="font-size:8px;">
-         <a href="https://www.pexels.com/de-de/foto/farbe-klinik-gesundheit-krankenhaus-5863367/">Quelle Titelbild</a>
+        <a href="https://www.pexels.com/de-de/foto/farbe-klinik-gesundheit-krankenhaus-5863367/">Quelle Titelbild</a>
       </p>
     </footer>
 
