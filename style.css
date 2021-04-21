@@ -55,8 +55,7 @@
   .wrapper {
     display: grid;
     grid-gap: 20px;
-    max-width: 1400px;
-    align: center;
+    max-width: 1400px;    
   }
   
   /* Navigation */

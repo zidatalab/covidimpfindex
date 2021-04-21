@@ -8,7 +8,14 @@
   <title>Corona-Impfindex</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/75c95ad019.js"></script>
-  <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+  <script type="text/javascript">!function () {
+      "use strict"; window.addEventListener("message", (function (a) {
+        if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) {
+          var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t &&
+            (t.style.height = a.data["datawrapper-height"][e] + "px")
+        }
+      }))
+    }();
   </script>
   <script>
     var today = new Date();
@@ -46,33 +53,29 @@
             style="height: 3rem; margin:5px;"></a>
       </p>
     </div>
-    <section class="top-container">
+    <div class="top-container">
 
       <header class="showcase">
         <!-- https://www.pexels.com/de-de/foto/farbe-klinik-gesundheit-krankenhaus-5863367/-->
         <h1>Corona-Impfindex</h1>
         <p>Überblick über den aktuellen Verlauf der Impfkampagne in Deutschland mit einem Fokus auf Arztpraxen.</p>
       </header>
-    </section>
+    </div>
 
 
-    <!-- Info Section -->
-    <section class="info">
-      <div>
+    <!-- Info div -->
+    <div class="info">
+      <div style="max-width: 400px;">
         <iframe title="Aktueller Stand" aria-label="Balken" id="datawrapper-chart-tp38e"
           src="https://datawrapper.dwcdn.net/tp38e/1/" scrolling="no" frameborder="0"
-          style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+          style="width: 0; min-width: 100% !important; border: none;" height="332"></iframe>
         <div>
           <!--  <p class="caption">Datenstand: BMG/RKI Impfdashboard <span id="standrki"></span>, KBV Impfdokumentation <span id="standkbv"></span><br> 
             Letzte Datenaktualisierung: <span id="aktualisiert"></span>,<span id="aktualisiertuhr"></span> Uhr </p>-->
         </div>
       </div>
       <div style="background-color: rgba(0, 0, 0, 0.057);border-radius: 30px;padding: 2rem;">
-        <h2>Meilensteine</h2>
-        <p>
-          <strong>27.12.2020</strong><br>
-          Beginn der Impfkampagne.
-        </p>
+        <h2>Aktuelles</h2>
         <p>
           <strong>1.3.2021</strong><br>
           Modellprojekte zum Impfen in Arztpraxen in größerem Umfang etabliert.
@@ -81,21 +84,27 @@
           <strong>6.4.2021</strong><br>
           Beginn der Impfungen in den Arztpraxen.
         </p>
+        <p>
+          <strong>20.4.2021</strong><br>
+          Die Daten zu den Lieferungen wurden mit Angaben des PEI zum Warenausgang für die KW 14 und 15 aktualisiert.
+          Liegen keine Informationen vom PEI vor,
+          wird eine Verteilung zugesagter Lieferungen nach Bevölkerungsschlüssel angenommen.
+        </p>
       </div>
 
-    </section>
+    </div>
 
-    <!-- Boxes Section -->
-    <section class="boxes">
+    <!-- Boxes div -->
+    <div class="boxes">
       <div class="box">
         <iframe title="Aktuelle Impfungen" aria-label="Balken (gestapelt)" id="datawrapper-chart-Zb8fr"
-          src="https://datawrapper.dwcdn.net/Zb8fr/1/" scrolling="no" frameborder="0"
+          src="https://datawrapper.dwcdn.net/Zb8fr/" scrolling="no" frameborder="0"
           style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
       </div>
       <div class="box">
 
         <iframe title="Stand der Impfkampagne gegen COVID-19" aria-label="Interactive area chart"
-          id="datawrapper-chart-i0p1O" src="https://datawrapper.dwcdn.net/i0p1O/2/" scrolling="no" frameborder="0"
+          id="datawrapper-chart-i0p1O" src="https://datawrapper.dwcdn.net/i0p1O/" scrolling="no" frameborder="0"
           style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
 
 
@@ -103,63 +112,55 @@
       <div class="box">
 
         <iframe title="Entwicklung der Impfkampagne gegen COVID-19" aria-label="Interactive line chart"
-          id="datawrapper-chart-KW0Ku" src="https://datawrapper.dwcdn.net/KW0Ku/1/" scrolling="no" frameborder="0"
+          id="datawrapper-chart-KW0Ku" src="https://datawrapper.dwcdn.net/KW0Ku/" scrolling="no" frameborder="0"
           style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
 
 
       </div>
-      <!-- <div class="box" >
-
-        <iframe title="Verimpfung der verfügbaren Dosen" aria-label="Interactive area chart"
-          id="datawrapper-chart-IKoqY" src="https://datawrapper.dwcdn.net/IKoqY/2/" scrolling="no" frameborder="0"
-          style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
-      </div> -->
       <div class="box">
         <iframe title="Verimpften Dosen an wöchentlichen Lieferungen" aria-label="Interactive line chart"
-          id="datawrapper-chart-kshoC" src="https://datawrapper.dwcdn.net/kshoC/1/" scrolling="no" frameborder="0"
+          id="datawrapper-chart-kshoC" src="https://datawrapper.dwcdn.net/kshoC/" scrolling="no" frameborder="0"
           style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
 
       </div>
+    </div>
+
+    <div class="box">
+      <iframe title="Impfungen in Arztpraxen in der letzten Kalenderwoche" aria-label="chart1"
+        id="datawrapper-chart-YT84k" src="https://datawrapper.dwcdn.net/YT84k/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="980"></iframe>
+    </div>
+    <div class="box">
+      <iframe title="Stand der Impfkampagne nach Bundesländern" aria-label="chart" id="datawrapper-chart-zA0AE"
+        src="https://datawrapper.dwcdn.net/zA0AE/10/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="964"></iframe>
+    </div>
+
+
+    <div class="boxes">
       <div class="box">
         <iframe title="Prognose der Impfquote" aria-label="Interactive area chart" id="datawrapper-chart-29NoU"
-          src="https://datawrapper.dwcdn.net/29NoU/6/" scrolling="no" frameborder="0"
-          style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>  
+          src="https://datawrapper.dwcdn.net/29NoU/" scrolling="no" frameborder="0"
+          style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
       </div>
       <div class="box">
         <iframe title="Prognose effektiver R-Wert" aria-label="Interactive line chart" id="datawrapper-chart-goYcg"
-          src="https://datawrapper.dwcdn.net/goYcg/2/" scrolling="no" frameborder="0"
+          src="https://datawrapper.dwcdn.net/goYcg/" scrolling="no" frameborder="0"
           style="width: 0; min-width: 100% !important; border: none;" height="500"></iframe>
       </div>
+    </div>
 
-
-    </section>
-    <section class="biggerboxes">
-
-      <div class="box">
-        <iframe title="Stand der Impfkampagne nach Bundesländern" aria-label="chart" id="datawrapper-chart-zA0AE"
-          src="https://datawrapper.dwcdn.net/zA0AE/7/" scrolling="no" frameborder="0"
-          style="width: 0; min-width: 100% !important; border: none;" height="950"></iframe>
-      </div>
-    </section>
-    <section class="biggerboxes">
-      <div class="box">
-        <iframe title="Impfungen in Arztpraxen in der letzten Kalenderwoche" aria-label="chart"
-          id="datawrapper-chart-YT84k" src="https://datawrapper.dwcdn.net/YT84k/2/" scrolling="no" frameborder="0"
-          style="width: 0; min-width: 100% !important; border: none;" height="980">
-      </div>
-
-    </section>
 
 
 
 
     <!-- Portfolio -->
-    <!-- <section class="portfolio">
+    <!-- <div class="portfolio">
                   <img src="https://source.unsplash.com/random/200x200" alt="">
                   <img src="https://source.unsplash.com/random/201x200" alt="">
                   <img src="https://source.unsplash.com/random/202x200" alt="">
                   <img src="https://source.unsplash.com/random/203x200" alt="">
-                </section> -->
+                </div> -->
     <!-- Navigation -->
     <nav class="main-nav">
       <ul>
