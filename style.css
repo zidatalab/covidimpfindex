@@ -30,6 +30,15 @@
     color: var(--zidarkgrey);
   }
   
+  a,a:active,a:visited {
+    text-decoration: none;
+    color:var(--ziblue);
+  }
+  a:hover {
+    text-decoration: underline;
+    
+  }
+  
   body {
     background: var(--zilightgrey);
     margin: 0px 50px;
