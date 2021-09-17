@@ -73,7 +73,7 @@
     grid-gap: 20px;
     padding: 0;
     list-style: none;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .main-nav a {
@@ -247,7 +247,7 @@
     }
   
     .main-nav ul {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr;      
     }
   
     .info {
